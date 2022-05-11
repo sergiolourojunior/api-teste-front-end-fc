@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação</title>
+
+    <style>
+        body, html { margin: 0; padding: 0; }
+        body { background-color: #EFEFEF; color: #363636; font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.4; padding: 40px 0; }
+
+        h1, h2, h3, h4, h5, h6 { line-height: 1.2; padding: 0; margin: 0; display: block; }
+        h1 { font-size: 36px; margin-bottom: 10px; }
+        h2 { font-size: 28px; margin-bottom: 10px; }
+        h3 { font-size: 22px; margin-top: 25px; margin-bottom: 8px; }
+        h4 { font-size: 18px; margin-top: 15px; margin-bottom: 6px; }
+
+        p { margin: 0; margin-bottom: 10px; }
+        a, a:visited { color: #483698; text-decoration: none; }
+        a:hover, a:active { text-decoration: underline; }
+        code { color: #483698; padding: 2px 4px; border-radius: 2px; background-color: rgba(115, 98, 191, .15) }
+        pre { background-color: #424242; color: #EFEFEF; border-radius: 2px; font-size: 14px; padding: 4px; overflow-x: auto; }
+
+        .method { border-radius: 4px; background-color: #7362BF; color: #FFF; padding: 4px 8px; font-size: 14px; font-weight: 600; }
+
+        section { margin-top: 40px; display: block; }
+        .container { width: 1200px; margin: 0 auto; max-width: 100%; padding: 0 15px; }
+
+        table { border-collapse: collapse; border: 1px solid #dee2e6; }
+        table thead td, table thead th { border-bottom-width: 2px; }
+        table thead th { vertical-align: bottom; text-align: left; border-bottom: 2px solid #dee2e6; }
+        table td, table th { border: 1px solid #dee2e6; padding: 8px 12px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Documentação</h1>
+        <p>Utilize esta documentação para interagir com as rotas desta API.</p>
+
+        <section>
+            <h2>Configurações</h2>
+            <p>Todos as rotas partirão da URL <code>http://localhost:3000</code>.</p>
+            <p>O único método aceito é o <span class="method">GET</span>, utilizado para consultar dados.</p>
+            <p>O conteúdo de todas as respostas estará formatado em <code>Application/json</code>.</p>
+        </section>
+
+        <section id="section-profissionais">
+            <h2>Profissionais</h2>
+            <div>
+                <span class="method">GET</span>
+                <a href="/profissionais">/profissionais</a>
+            </div>
+
+            <h3>Descrição</h3>
+            <p>Esta rota retorna todos os profissionais cadastrados na plataforma.</p>
+
+            <h3>Requisição</h3>
+            <p><code>http://localhost:3000/profissionais</code></p>
+
+            <h4>Filtro</h4>
+            <p>Para filtrar os resultados, utilize como parâmetro o atributo que você deseja filtrar na URL da requisição. Por exemplo:</p>
+            <p><code>http://localhost:3000/profissionais?cidadeId=2</code></p>
+            <p>O retorno desta requisição será todos os profissionais que possuem o valor <b>2</b> no atributo <code>cidadeId</code>. Caso não existam profissionais cadastrados nesta cidade, será retornado um array de objetos vazio.</p>
+
+            <h3>Retorno</h3>
+            <pre>
+[
+    {
+        "id": 1,
+        "nome": "Lucca Cláudio Otávio Galvão",
+        "cpf": "91176857029",
+        "cidadeId": 1,
+        "especialidadeId": 1
+    },
+    {
+        "id": 2,
+        "nome": "Dr. Bryan Arthur Juan Assunção",
+        "cpf": "86821447004",
+        "cidadeId": 4,
+        "especialidadeId": 1
+    },
+    // ...
+]
+            </pre>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parâmetro</th>
+                        <th>Tipo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>id</td>
+                        <td><code>integer</code></td>
+                        <td>Identificador único do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>nome</td>
+                        <td><code>string</code></td>
+                        <td>Nome do profissional.</td>
+                    </tr>
+                    <tr>
+                        <td>cpf</td>
+                        <td><code>string</code></td>
+                        <td>CPF do profissional.</td>
+                    </tr>
+                    <tr>
+                        <td>cidadeId</td>
+                        <td><code>integer</code></td>
+                        <td>Identificador para a rota de <a href="#section-cidades">cidades</a>.</td>
+                    </tr>
+                    <tr>
+                        <td>especialidadeId</td>
+                        <td><code>integer</code></td>
+                        <td>Identificador para a rota de <a href="#section-especialidades">especialidades</a>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="section-cidades">
+            <h2>Cidades</h2>
+            <div>
+                <span class="method">GET</span>
+                <a href="/cidades">/cidades</a>
+            </div>
+
+            <h3>Descrição</h3>
+            <p>Esta rota retorna todos as cidades cadastradas na plataforma.</p>
+
+            <h3>Requisição</h3>
+            <p><code>http://localhost:3000/cidades</code></p>
+
+            <h4>Filtro</h4>
+            <p>Para filtrar os resultados, utilize como parâmetro o atributo que você deseja filtrar na URL da requisição. Por exemplo:</p>
+            <p><code>http://localhost:3000/cidades?estadoId=2</code></p>
+            <p>O retorno desta requisição será todas as cidades que possuem o valor <b>2</b> no atributo <code>estadoId</code>.</p>
+
+            <h3>Retorno</h3>
+            <pre>
+[
+    {
+        "id": 1,
+        "nome": "Pelotas",
+        "estadoId": 1
+    },
+    {
+        "id": 2,
+        "nome": "Santa Maria",
+        "estadoId": 1
+    },
+    {
+        "id": 3,
+        "nome": "Joinville",
+        "estadoId": 2
+    },
+    // ...
+]
+            </pre>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parâmetro</th>
+                        <th>Tipo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>id</td>
+                        <td><code>integer</code></td>
+                        <td>Identificador único do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>nome</td>
+                        <td><code>string</code></td>
+                        <td>Nome da cidade.</td>
+                    </tr>
+                    <tr>
+                        <td>estadoId</td>
+                        <td><code>integer</code></td>
+                        <td>Identificador para a rota de <a href="#section-estados">estados</a>.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="section-estados">
+            <h2>Estados</h2>
+            <div>
+                <span class="method">GET</span>
+                <a href="/estados">/estados</a>
+            </div>
+
+            <h3>Descrição</h3>
+            <p>Esta rota retorna todos os estados cadastrados na plataforma.</p>
+
+            <h3>Requisição</h3>
+            <p><code>http://localhost:3000/estados</code></p>
+
+            <h4>Filtro</h4>
+            <p>Para filtrar os resultados, utilize como parâmetro o atributo que você deseja filtrar na URL da requisição. Por exemplo:</p>
+            <p><code>http://localhost:3000/estados?sigla=RS</code></p>
+            <p>O retorno desta requisição será todas as cidades que possuem o valor <b>RS</b> no atributo <code>sigla</code>.</p>
+            <h4>Relacionamento</h4>
+            <p>Você pode fazer relações entre rotas informando na URL com qual tabela você deseja relacionar. Por exemplo:</p>
+            <p><code>http://localhost:3000/estados?_embed=cidades</code></p>
+            <p>No exemplo acima, o retorno será a lista de estados e para cada estado será listado as cidades respectivas.</p>
+            <p>Você também pode fazer a relação de apenas um registro. No exemplo abaixo é mostrado como mostrar os dados do estado "Santa Catarina" e suas respectivas cidades.</p>
+            <p><code>http://localhost:3000/estados/2/cidades</code></p>
+
+            <h3>Retorno</h3>
+            <pre>
+[
+    {
+        "id": 1,
+        "nome": "Rio Grande do Sul",
+        "sigla": "RS"
+    },
+    {
+        "id": 2,
+        "nome": "Santa Catarina",
+        "sigla": "SC"
+    },
+    // ...
+]
+            </pre>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parâmetro</th>
+                        <th>Tipo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>id</td>
+                        <td><code>integer</code></td>
+                        <td>Identificador único do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>nome</td>
+                        <td><code>string</code></td>
+                        <td>Nome do estado.</td>
+                    </tr>
+                    <tr>
+                        <td>sigla</td>
+                        <td><code>string</code></td>
+                        <td>Sigla do estado.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="section-especialidades">
+            <h2>Especialidades</h2>
+            <div>
+                <span class="method">GET</span>
+                <a href="/especialidades">/especialidades</a>
+            </div>
+
+            <h3>Descrição</h3>
+            <p>Esta rota retorna todas as especialidades cadastradas na plataforma.</p>
+
+            <h3>Requisição</h3>
+            <p><code>http://localhost:3000/especialidades</code></p>
+
+            <h3>Retorno</h3>
+            <pre>
+[
+    {
+        "id": 1,
+        "nome": "Cardiologia"
+    },
+    {
+        "id": 2,
+        "nome": "Cirurgia Geral"
+    },
+    {
+        "id": 3,
+        "nome": "Dermatologia"
+    },
+    // ...
+]
+            </pre>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parâmetro</th>
+                        <th>Tipo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>id</td>
+                        <td><code>integer</code></td>
+                        <td>Identificador único do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>nome</td>
+                        <td><code>string</code></td>
+                        <td>Nome da especialidade.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Considerações gerais</h2>
+            <p>Esta API é baseada no <a href="https://github.com/typicode/json-server" target="_blank">JSON Server</a>. Você pode ler a documentação completa <a href="https://github.com/typicode/json-server/blob/master/README.md" target="_blank">neste link</a>.</p>
+        </section>
+    </div>
+
+</body>
+</html>

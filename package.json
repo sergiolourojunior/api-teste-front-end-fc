@@ -1,0 +1,23 @@
+{
+  "name": "api-teste-front-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://fcsergio@bitbucket.org/krishnaxavier/api-teste-front-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/krishnaxavier/api-teste-front-end/issues"
+  },
+  "homepage": "https://bitbucket.org/krishnaxavier/api-teste-front-end#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}

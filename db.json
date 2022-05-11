@@ -1,0 +1,49 @@
+{
+    "estados": [
+        { "id": 1, "nome": "Rio Grande do Sul", "sigla": "RS" },
+        { "id": 2, "nome": "Santa Catarina", "sigla": "SC" },
+        { "id": 3, "nome": "Paraná", "sigla": "PR" },
+        { "id": 4, "nome": "Goiás", "sigla": "GO" },
+        { "id": 5, "nome": "Mato Grosso", "sigla": "MT" },
+        { "id": 6, "nome": "Mato Grosso do Sul", "sigla": "MS" }
+    ],
+    "cidades": [
+        { "id": 1, "nome": "Pelotas", "estadoId": 1 },
+        { "id": 2, "nome": "Santa Maria", "estadoId": 1 },
+        { "id": 3, "nome": "Joinville", "estadoId": 2 },
+        { "id": 4, "nome": "Caxias do Sul", "estadoId": 1 },
+        { "id": 5, "nome": "Londrina", "estadoId": 3 },
+        { "id": 6, "nome": "Maringá", "estadoId": 3 },
+        { "id": 7, "nome": "Campo Grande", "estadoId": 6 },
+        { "id": 8, "nome": "Goiânia", "estadoId": 4 },
+        { "id": 9, "nome": "Cuiabá", "estadoId": 5 },
+        { "id": 10, "nome": "Florianópolis", "estadoId": 2 },
+        { "id": 11, "nome": "Porto Alegre", "estadoId": 1 }
+    ],
+    "especialidades": [
+        { "id": 1, "nome": "Cardiologia" },
+        { "id": 2, "nome": "Cirurgia Geral" },
+        { "id": 3, "nome": "Dermatologia" },
+        { "id": 4, "nome": "Endocrinologia e Metabologia" },
+        { "id": 5, "nome": "Ginecologia e obstetrícia" },
+        { "id": 6, "nome": "Hepatologia" },
+        { "id": 7, "nome": "Neurologia" },
+        { "id": 8, "nome": "Nutricionista" },
+        { "id": 9, "nome": "Oftalmologia" },
+        { "id": 10, "nome": "Ortopedia e traumatologia" },
+        { "id": 11, "nome": "Pediatria" },
+        { "id": 12, "nome": "Psiquiatria" }
+    ],
+    "profissionais": [
+        { "id": 1, "nome": "Lucca Cláudio Otávio Galvão", "cpf": "91176857029", "cidadeId": 1, "especialidadeId": 1 },
+        { "id": 2, "nome": "Dr. Bryan Arthur Juan Assunção", "cpf": "86821447004", "cidadeId": 4, "especialidadeId": 12 },
+        { "id": 3, "nome": "Dra. Vitória Ester Aragão", "cpf": "90570132746", "cidadeId": 9, "especialidadeId": 10 },
+        { "id": 4, "nome": "Dra. Vanessa Daiane Clara Jesus", "cpf": "92773865251", "cidadeId": 1, "especialidadeId": 8 },
+        { "id": 5, "nome": "Dr. Anthony Thiago Pietro Baptista", "cpf": "15331884083", "cidadeId": 2, "especialidadeId": 8 },
+        { "id": 6, "nome": "Dra. Isadora Vera Ana Aparício", "cpf": "16417392317", "cidadeId": 8, "especialidadeId": 7 },
+        { "id": 7, "nome": "Dra. Luna Sarah Pires", "cpf": "54843962716", "cidadeId": 7, "especialidadeId": 3 },
+        { "id": 8, "nome": "Dr. Alexandre Alexandre Davi Duarte", "cpf": "17595071720", "cidadeId": 5, "especialidadeId": 2 },
+        { "id": 9, "nome": "Dr. Felipe Elias Pedro da Rosa", "cpf": "77989851580", "cidadeId": 4, "especialidadeId": 4 },
+        { "id": 10, "nome": "Dr. Noah Breno Raimundo Viana", "cpf": "15960468484", "cidadeId": 10, "especialidadeId": 6 }
+    ]
+}
