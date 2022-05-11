@@ -35,15 +35,15 @@
         { "id": 12, "nome": "Psiquiatria" }
     ],
     "profissionais": [
-        { "id": 1, "nome": "Lucca Cláudio Otávio Galvão", "cpf": "91176857029", "cidadeId": 1, "especialidadeId": 1 },
-        { "id": 2, "nome": "Dr. Bryan Arthur Juan Assunção", "cpf": "86821447004", "cidadeId": 4, "especialidadeId": 12 },
-        { "id": 3, "nome": "Dra. Vitória Ester Aragão", "cpf": "90570132746", "cidadeId": 9, "especialidadeId": 10 },
-        { "id": 4, "nome": "Dra. Vanessa Daiane Clara Jesus", "cpf": "92773865251", "cidadeId": 1, "especialidadeId": 8 },
-        { "id": 5, "nome": "Dr. Anthony Thiago Pietro Baptista", "cpf": "15331884083", "cidadeId": 2, "especialidadeId": 8 },
-        { "id": 6, "nome": "Dra. Isadora Vera Ana Aparício", "cpf": "16417392317", "cidadeId": 8, "especialidadeId": 7 },
-        { "id": 7, "nome": "Dra. Luna Sarah Pires", "cpf": "54843962716", "cidadeId": 7, "especialidadeId": 3 },
-        { "id": 8, "nome": "Dr. Alexandre Alexandre Davi Duarte", "cpf": "17595071720", "cidadeId": 5, "especialidadeId": 2 },
-        { "id": 9, "nome": "Dr. Felipe Elias Pedro da Rosa", "cpf": "77989851580", "cidadeId": 4, "especialidadeId": 4 },
-        { "id": 10, "nome": "Dr. Noah Breno Raimundo Viana", "cpf": "15960468484", "cidadeId": 10, "especialidadeId": 6 }
+        { "id": 1, "nome": "Lucca Cláudio Otávio Galvão", "cpf": "90238490293", "cidadeId": 1, "especialidadeId": 1 },
+        { "id": 2, "nome": "Dr. Bryan Arthur Juan Assunção", "cpf": "01834560834", "cidadeId": 4, "especialidadeId": 12 },
+        { "id": 3, "nome": "Dra. Vitória Ester Aragão", "cpf": "43095813049", "cidadeId": 9, "especialidadeId": 10 },
+        { "id": 4, "nome": "Dra. Vanessa Daiane Clara Jesus", "cpf": "03418534943", "cidadeId": 1, "especialidadeId": 8 },
+        { "id": 5, "nome": "Dr. Anthony Thiago Pietro Baptista", "cpf": "57304984029", "cidadeId": 2, "especialidadeId": 8 },
+        { "id": 6, "nome": "Dra. Isadora Vera Ana Aparício", "cpf": "12904019492", "cidadeId": 8, "especialidadeId": 7 },
+        { "id": 7, "nome": "Dra. Luna Sarah Pires", "cpf": "23908482939", "cidadeId": 7, "especialidadeId": 3 },
+        { "id": 8, "nome": "Dr. Alexandre Alexandre Davi Duarte", "cpf": "02398492393", "cidadeId": 5, "especialidadeId": 2 },
+        { "id": 9, "nome": "Dr. Felipe Elias Pedro da Rosa", "cpf": "02890238492", "cidadeId": 4, "especialidadeId": 4 },
+        { "id": 10, "nome": "Dr. Noah Breno Raimundo Viana", "cpf": "32940829509", "cidadeId": 10, "especialidadeId": 6 }
     ]
 }
